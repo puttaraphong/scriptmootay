@@ -1,0 +1,233 @@
+<?xml version="1.0"?> 
+
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema"> 
+
+  <pnp:Preferences Generator="PnP.Framework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=null" /> 
+
+  <pnp:Templates ID="CONTAINER-TEMPLATE-B0395BB15FF54896B708AA8D77756D6E"> 
+
+    <pnp:ProvisioningTemplate ID="TEMPLATE-B0395BB15FF54896B708AA8D77756D6E" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite"> 
+
+      <pnp:Lists> 
+
+        <pnp:ListInstance Title="Submit Activity" Description="Submit Document Activity for HRDM" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/Submit Activity1" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Submit Activity1/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Submit Activity1/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Submit Activity1/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage=""> 
+
+          <pnp:ContentTypeBindings> 
+
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" /> 
+
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" /> 
+
+          </pnp:ContentTypeBindings> 
+
+          <pnp:Views> 
+
+            <View Name="{6718FF36-1A21-454A-A10D-C6EC3E0AA2BE}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Submit Activity1/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47"> 
+
+              <Query /> 
+
+              <ViewFields> 
+
+                <FieldRef Name="DocumentType" /> 
+
+                <FieldRef Name="EnterDate" /> 
+
+                <FieldRef Name="SubmitDate" /> 
+
+                <FieldRef Name="LinkTitle" /> 
+
+                <FieldRef Name="EnterBy" /> 
+
+                <FieldRef Name="SubmitBy" /> 
+
+                <FieldRef Name="flow" /> 
+
+              </ViewFields> 
+
+              <RowLimit Paged="TRUE">30</RowLimit> 
+
+              <JSLink>clienttemplates.js</JSLink> 
+
+              <CustomFormatter /> 
+
+            </View> 
+
+          </pnp:Views> 
+
+          <pnp:Fields> 
+
+            <Field Type="TaxonomyFieldType" DisplayName="DocumentType" List="{listid:TaxonomyHiddenList}" WebId="{siteid}" ShowField="Term1033" ID="{96baf3ae-cdbf-41ea-a751-708fb686f001}" SourceID="{{listid:Submit Activity}}" StaticName="DocumentType" Name="DocumentType" ColName="int1" RowOrdinal="0" CustomFormatter="" Description="ประเภทเอกสาร" EnforceUniqueValues="FALSE" Required="FALSE" Version="5"> 
+
+              <Default /> 
+
+              <Customization> 
+
+                <ArrayOfProperty> 
+
+                  <Property> 
+
+                    <Name>SspId</Name> 
+
+                    <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>GroupId</Name> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>TermSetId</Name> 
+
+                    <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:HRDM:ข้อมูลบุคคล}</Value> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>AnchorId</Name> 
+
+                    <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>UserCreated</Name> 
+
+                    <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>Open</Name> 
+
+                    <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>TextField</Name> 
+
+                    <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{ee02bc25-5dd8-4f68-815d-cb6ef29f329e}</Value> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>IsPathRendered</Name> 
+
+                    <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>IsKeyword</Name> 
+
+                    <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>TargetTemplate</Name> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>CreateValuesInEditForm</Name> 
+
+                    <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>IsDocTagsEnabled</Name> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>FilterAssemblyStrongName</Name> 
+
+                    <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>FilterClassName</Name> 
+
+                    <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>FilterMethodName</Name> 
+
+                    <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value> 
+
+                  </Property> 
+
+                  <Property> 
+
+                    <Name>FilterJavascriptProperty</Name> 
+
+                    <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value> 
+
+                  </Property> 
+
+                </ArrayOfProperty> 
+
+              </Customization> 
+
+            </Field> 
+
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" Description="Date that document enters to HRDM" DisplayName="Enter Date" FriendlyDisplayFormat="Disabled" Format="DateTime" Name="EnterDate" Title="Enter Date" Type="DateTime" ID="{16e1da1c-dea1-4ac8-9540-d657eb09f975}" Version="4" StaticName="EnterDate" SourceID="{{listid:Submit Activity}}" ColName="datetime1" RowOrdinal="0" /> 
+
+            <Field Description="user who enters document to HRDM" DisplayName="Enter By" Format="Dropdown" IsModern="TRUE" List="UserInfo" Name="EnterBy" Title="Enter By" Type="User" UserSelectionMode="0" UserSelectionScope="0" ID="{3692c0e5-7bb0-4c8e-bc89-84f6535228b4}" SourceID="{{listid:Submit Activity}}" StaticName="EnterBy" ColName="int3" RowOrdinal="0" /> 
+
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" Description="link to flow detail" DisplayName="flow" Format="Hyperlink" Name="flow" Title="flow" Type="URL" ID="{d3bd7381-639f-4dc3-9cf3-a0dc31415983}" Version="2" StaticName="flow" SourceID="{{listid:Submit Activity}}" ColName="nvarchar4" RowOrdinal="0" ColName2="nvarchar5" RowOrdinal2="0" /> 
+
+            <Field Description="User who submit this document" DisplayName="Submit By" Format="Dropdown" IsModern="TRUE" List="UserInfo" Name="SubmitBy" Title="Submit By" Type="User" UserSelectionMode="0" UserSelectionScope="0" ID="{66ded4c5-9aff-40e9-852e-c8c4f57b6527}" SourceID="{{listid:Submit Activity}}" StaticName="SubmitBy" ColName="int4" RowOrdinal="0" /> 
+
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" Description="Date that document submit to store in classified library" DisplayName="Submit Date" FriendlyDisplayFormat="Disabled" Format="DateOnly" Name="SubmitDate" Title="Submit Date" Type="DateTime" ID="{bdcaf5aa-c32d-4740-83d0-8b2386b00b74}" Version="2" StaticName="SubmitDate" SourceID="{{listid:Submit Activity}}" ColName="datetime2" RowOrdinal="0" /> 
+
+          </pnp:Fields> 
+
+          <pnp:Security> 
+
+            <pnp:BreakRoleInheritance CopyRoleAssignments="false" ClearSubscopes="false"> 
+
+              <pnp:RoleAssignment Principal="{associatedownergroupid}" RoleDefinition="Edit" /> 
+
+            </pnp:BreakRoleInheritance> 
+
+          </pnp:Security> 
+
+          <pnp:Webhooks> 
+
+            <pnp:Webhook ServerNotificationUrl="https://japaneast1-0.pushnp.svc.ms/notifications?token=2d6f7d02-ff0c-40a1-8412-c55a8a15456f" ExpiresInDays="1" /> 
+
+            <pnp:Webhook ServerNotificationUrl="https://japaneast1-0.pushnp.svc.ms/notifications?token=627ff35b-8afc-43f5-85a7-7bff5017e501" ExpiresInDays="1" /> 
+
+          </pnp:Webhooks> 
+
+        </pnp:ListInstance> 
+
+      </pnp:Lists> 
+
+    </pnp:ProvisioningTemplate> 
+
+  </pnp:Templates> 
+
+</pnp:Provisioning> 
